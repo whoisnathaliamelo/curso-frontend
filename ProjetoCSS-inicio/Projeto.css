@@ -1,0 +1,109 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: rgb(199, 199, 199);
+}
+
+header {
+    background: url(imagens/bg-2.jpg) no-repeat;
+    background-position: center;
+    height: 500px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    text-align: right;
+    margin: 0;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu a {
+    background-color: gray;
+    padding: 16px 16px 16px 16px;
+    display: block;
+    color: white;
+}
+
+.menu a:hover {
+    background-color: rgba(0, 0, 0, 0.795);
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+}
+
+.destaque-1 {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: white;
+    
+}
+
+h2 {
+    margin-left: 135px;   /* Ajusta a margem do h2 para ficar mais centralizado */
+    margin-right: 135px;  /* Ajusta a margem do h2 */
+    background-color: rgb(180, 180, 180);
+    color: white;
+    padding: 10px;
+    margin-bottom: 0;
+    width: calc(100% - 270px);  /* Ajusta a largura do h2, subtraindo as margens */
+}
+
+p {
+    padding: 12px;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.destaque-2 {
+    display: inline-block;  
+    padding: 16px;          
+    background-color: gray; 
+    color: white;           
+    text-decoration: none;  
+    cursor: pointer;       
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 0;
+    text-align: center;    
+}
+
+.destaque-2:hover {
+    background-color: rgba(0, 0, 0, 0.795); 
+    color: white;            
+}
+
+nav {
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: white;
+    padding: 12px;   /* Ajusta o padding do nav para reduzir a altura */
+    width: calc(100% - 300px);  /* Ajusta a largura do nav */
+    margin-bottom: 20px;  /* Adiciona um espaço entre as seções */
+}
+
+footer p{
+    text-align: center;
+}

@@ -1,0 +1,124 @@
+/* A regra define que tanto o elemento <html> quanto o <body> devem ter 100% da altura da tela */
+html, body {
+    height: 100%;
+}
+
+/* Estilo do corpo da página */
+body {
+    /* Cor de fundo da página */
+    background-color: aqua;
+
+    /* Remover a margem e adicionar um padding de 90px ao redor do conteúdo */
+    margin: 0;
+    padding: 90px;
+
+    /* Definir a fonte do conteúdo */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    /* Usar flexbox para centralizar o conteúdo de forma vertical e horizontal */
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    
+    /* Organizar os itens da página em uma coluna */
+    flex-direction: column;
+}
+
+/* Estilo do título principal da página */
+.main-title {
+    /* Cor do texto do título */
+    color: #385555;
+}
+
+/* Estilo da lista (ul) que contém todos os itens de contato */
+.list {
+    /* A lista ocupa 90% da largura da tela */
+    width: 90%;
+    
+    /* Define um limite máximo de largura de 960px */
+    max-width: 960px;
+
+    /* Exibe os itens da lista de forma flexível (em linha, mas podendo quebrar linha) */
+    display: flex;
+    
+    /* Permite que os itens se reorganizem para a próxima linha quando necessário */
+    flex-wrap: wrap;
+    
+    /* Centraliza os itens da lista */
+    justify-content: center;
+    
+    /* Adiciona um espaçamento de 16px entre os itens da lista */
+    gap: 16px;
+    
+    /* Remove o estilo padrão de lista (como os bullets) */
+    list-style-type: none;
+}
+
+/* Estilo de cada item da lista (cada contato) */
+.list-item {
+    /* Define a largura mínima do item (base de flexbox) */
+    flex-basis: 280px;
+    
+    /* Cor de fundo do item da lista */
+    background-color: white;
+    
+    /* Arredonda as bordas do item */
+    border-radius: 5px;
+    
+    /* Centraliza o texto dentro do item */
+    text-align: center;
+    
+    /* Adiciona uma sombra ao redor do item para dar um efeito de profundidade */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+    
+    /* Define uma imagem de fundo para o item da lista */
+    background-image: url(imagens/thumb02.jpg);
+    
+    /* Faz a imagem de fundo cobrir 100% do item */
+    background-size: 100%;
+    
+    /* Evita que a imagem de fundo se repita */
+    background-repeat: no-repeat;
+}
+
+/* Estilo para a imagem dentro de cada item de lista */
+.list-item__imagem img {
+    /* Torna a imagem redonda */
+    border-radius: 50%;
+    
+    /* Define a largura da imagem como 80px */
+    width: 80px;
+    
+    /* Dá um espaço extra no topo para ajustar a posição da imagem dentro do item */
+    margin-top: 120px;
+}
+
+/* Estilo para o nome do contato dentro de cada item da lista */
+.list-item__name {
+    /* Remove a margem do nome */
+    margin: 0;
+    
+    /* Define o tamanho da fonte do nome */
+    font-size: 24px;
+    
+    /* Cor do texto do nome */
+    color: #385555;
+}
+
+/* Estilo para a seção de ações dentro de cada item da lista (onde ficam os ícones de editar e excluir) */
+.list-item__action {
+    /* Usa flexbox para exibir os ícones de ação em linha */
+    display: flex;
+
+    /* Cor de fundo da seção de ações */
+    background-color: #e5e5e5;
+    
+    /* Adiciona um espaçamento de 16px ao redor do conteúdo da seção */
+    padding: 16px;
+    
+    /* Distribui os ícones de maneira uniforme, com espaçamento igual entre eles */
+    justify-content: space-evenly;
+    
+    /* Adiciona um espaçamento de 16px entre os ícones de ação */
+    gap: 16px;
+}

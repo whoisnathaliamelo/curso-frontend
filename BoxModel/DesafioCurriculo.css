@@ -1,0 +1,78 @@
+h1{
+    background-color: rgb(201, 201, 201);
+    color: black;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 0;
+}
+
+h2{
+    background-color: rgb(201, 201, 201);
+    color: black;
+    border-bottom: 2px solid rgb(121, 121, 121);
+    padding: 12px;
+}
+
+.destaque{
+
+    text-align: center; 
+    margin-top: 0;
+    background-color: rgb(223, 223, 223);   
+}
+
+body{
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: sans-serif;
+}
+
+ul {
+    margin-left: 0%;
+    padding-left: 0%;
+    list-style-position: inside;
+}
+
+ul:not(.sem-estilo) {
+    list-style-type: none;
+}
+
+
+ul li{
+    margin-bottom: 15px;
+}
+
+.destaque-1{
+    font-weight: bold;
+    color: rgb(78, 78, 78);
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+
+    text-decoration: underline;
+}
+
+.menu{
+    text-align: right;
+}
+
+.menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.menu a{
+    background-color: rgb(201, 201, 201);
+    padding: 16px;
+    display: block;
+    color: black;
+}
+
+.menu a:hover {
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}

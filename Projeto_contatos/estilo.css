@@ -1,0 +1,138 @@
+/* Define a altura de html e body como 100% para garantir que ocupem toda a altura da tela */
+html, body {
+    height: 100%;
+}
+
+/* Estiliza o corpo da página */
+body {
+    /* Cor de fundo da página */
+    background-color: aqua;
+    
+    /* Remove a margem e o padding padrão do body */
+    margin: 0;
+    padding: 0;
+    
+    /* Define a fonte usada no corpo */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    /* Usa flexbox para centralizar o conteúdo da página */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    
+    /* Organiza os itens da página em uma coluna */
+    flex-direction: column;
+}
+
+/* Estilo do título principal */
+.main-title {
+    /* Cor do título */
+    color: #385555;
+}
+
+/* Estilo para o wrapper da lista de contatos */
+.list-wrapper {
+    /* Cor de fundo do wrapper */
+    background-color: white;
+    
+    /* Define a largura do wrapper como 90% da tela e um limite máximo de 500px */
+    width: 90%;
+    max-width: 500px;
+    
+    /* Define a altura máxima do wrapper */
+    max-height: 400px;
+    
+    /* Adiciona rolagem vertical caso o conteúdo ultrapasse a altura do wrapper */
+    overflow-y: auto;
+    
+    /* Arredonda as bordas do wrapper */
+    border-radius: 5px;
+    
+    /* Adiciona uma sombra suave ao redor do wrapper */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+}
+
+/* Estilo para a lista (ul) */
+.list {
+    /* Remove o estilo de lista padrão (bullets) */
+    list-style: none;
+    
+    /* Remove o padding e margem padrão do ul */
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Estilo de cada item da lista */
+.list-item {
+    /* Usa flexbox para alinhar os itens da lista */
+    display: flex;
+    
+    /* Adiciona uma linha de separação (borda inferior) entre os itens da lista */
+    border-bottom: 1px solid #eee;
+    
+    /* Adiciona padding de 16px ao redor de cada item */
+    padding: 16px;
+}
+
+/* Estilo da imagem dentro de cada item de lista */
+.list-item__imagem img {
+    /* Define a largura da imagem como 80px */
+    width: 80px;
+    
+    /* Torna a imagem redonda */
+    border-radius: 50%;
+}
+
+/* Estilo para o conteúdo dentro de cada item da lista */
+.list-item__content {
+    /* Adiciona padding de 0 a 20px nas laterais */
+    padding: 0 20px;
+    
+    /* Faz com que o conteúdo ocupe o espaço restante dentro do item */
+    flex-grow: 1;
+}
+
+/* Estilo para o nome do contato */
+.list-item__name {
+    /* Define o tamanho da fonte do nome */
+    font-size: 24px;
+    
+    /* Cor do nome */
+    color: #385555;
+    
+    /* Remove a margem do nome */
+    margin: 0;
+}
+
+/* Estilo para o email do contato */
+.list-item__email {
+    /* Define a margem superior para o email */
+    margin: 5px 0 0;
+    
+    /* Cor mais clara para o email */
+    color: #aaa;
+}
+
+/* Efeito de hover para os itens da lista */
+.list-item:hover {
+    /* Altera a cor de fundo ao passar o mouse sobre o item */
+    background-color: #e8e8e8e8;
+}
+
+/* Estilo para a seção de ações dentro de cada item da lista */
+.list-item__action {
+    /* Define o espaçamento entre os itens de ação */
+    gap: 16px;
+    
+    /* Alinha os ícones de ação ao centro verticalmente */
+    align-items: center;
+    
+    /* Torna os ícones invisíveis (opacidade 0) por padrão */
+    opacity: 0;
+}
+
+/* Quando o item da lista é hoverado, os ícones de ação ficam visíveis */
+.list-item:hover .list-item__action {
+    /* Define a opacidade dos ícones de ação como 0.3 quando o item é hoverado */
+    opacity: .3;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Declaração do tipo de documento e idioma da página -->
+<head>
+    <meta charset="UTF-8"> <!-- Define o charset da página como UTF-8, o que é importante para suportar caracteres especiais, como acentos -->
+    <title>Price cards</title> <!-- Título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="estilo.css"> <!-- Inclusão do arquivo de estilo externo -->
+</head>
+<body> <!-- Início do corpo da página -->
+
+    <header class="header"> <!-- Início da seção do cabeçalho -->
+        <div class="header__logo">MyServer</div> <!-- Logo do site -->
+        <nav class="header__nav"> <!-- Navegação principal -->
+            <ul> <!-- Lista de navegação -->
+                <li><a href="#">Home</a></li> <!-- Link para a página inicial -->
+                <li><a href="#" class="header__nav--active">Planos</a></li> <!-- Link para a página de planos, com a classe 'header__nav--active' para estilizar o link ativo -->
+                <li><a href="#">Suporte</a></li> <!-- Link para a página de suporte -->
+                <li><a href="#">Contato</a></li> <!-- Link para a página de contato -->
+            </ul>
+        </nav>
+    </header> <!-- Fim da seção de cabeçalho -->
+
+    <h1 class="main-title">Escolha seu plano</h1> <!-- Título principal da página -->
+
+    <section class="pricing"> <!-- Seção para mostrar os planos de preços -->
+        <!-- Cada bloco de plano de preços -->
+        <div class="pricing-plan">
+            <h2 class="pricing-plan__title">Essencial</h2> <!-- Título do plano -->
+            <p> <span class="pricing-plan__price">$3,95</span> / mês</p> <!-- Preço do plano -->
+            <ul class="pricing-plan__features"> <!-- Lista de características do plano -->
+                <li>1 Website</li>
+                <li>1GB de Armazenamento</li>
+                <li>10GB de transferência</li> 
+            </ul>
+            <a href="#" class="pricing-plan__cta">Assine já</a> <!-- Botão de chamada para ação -->
+        </div>
+        
+        <div class="pricing-plan">
+            <h2 class="pricing-plan__title">Premium</h2> <!-- Título do plano -->
+            <p> <span class="pricing-plan__price">$7,95</span> / mês</p> <!-- Preço do plano -->
+            <ul class="pricing-plan__features">
+                <li>5 Websites</li>
+                <li>3GB de Armazenamento</li>
+                <li>Transferência ilimitada</li>
+                <li>10 horas de suporte mensais</li>
+            </ul>
+            <a href="#" class="pricing-plan__cta">Assine já</a>
+        </div>
+
+        <div class="pricing-plan">
+            <h2 class="pricing-plan__title">Deluxe</h2> <!-- Título do plano -->
+            <p> <span class="pricing-plan__price">$13,95</span> / mês</p> <!-- Preço do plano -->
+            <ul class="pricing-plan__features">
+                <li>10 Websites</li>
+                <li>30GB de Armazenamento</li>
+                <li>Transferência ilimitada</li>
+                <li>30 horas de suporte mensais</li>
+                <li>Email personalizado</li>
+            </ul>
+            <a href="#" class="pricing-plan__cta">Assine já</a>
+        </div>
+    </section> <!-- Fim da seção de planos de preços -->
+</body>
+</html>

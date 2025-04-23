@@ -1,0 +1,49 @@
+body{
+    background-color:darksalmon;
+}
+
+h1 {
+    color: red;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+h3 {
+    fonte-size: 25pix;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: underline;
+    background-color: blueviolet;
+}
+
+p {
+    text-indent: 20px;
+    font-size: 20px;
+    text-align: left;
+    color:rgb(20, 56, 20);
+    font-variant: small-caps;
+}
+
+a {
+    text-decoration: none;
+    font-variant: normal;
+}
+
+.p2{
+    color:black;
+
+}
+
+.t1{
+    color: black;
+}
+
+.destaque{
+    background-color: orange;
+}
