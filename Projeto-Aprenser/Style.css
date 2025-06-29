@@ -57,7 +57,7 @@ body {
 }
 
 .text:hover {
-  color: #ffd620; /* Cor de hover no texto */
+  color: #ffd620;
 }
 
 /* Seções */
@@ -71,7 +71,7 @@ section {
   padding-top: 100px; /* Garantir que as seções comecem abaixo do menu fixo */
 }
 
-/* Estilo do background da Section-1 */
+
 .section-1 {
   display: flex;
   justify-content: center;
@@ -82,7 +82,7 @@ section {
     #ffffd5,
     #ffd930,
     #ffd620
-  ); /* Gradiente amarelo */
+  ); 
   position: relative;
 }
 
@@ -120,7 +120,6 @@ section {
   text-decoration: none;
 }
 
-/* Estilos dos cursos */
 .titulo-2 {
   text-align: center;
   margin-top: 50px;
