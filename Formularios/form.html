@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Formulario</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Introdução</legend>
+            <input type="email" name="email" required placeholder="digite seu email"><br><br>
+
+            <label for="filhos">Quantidade de filhos</label>
+
+            <input type="number" id="filhos" min="0">
+
+            <input type="date" min="2022-01-15">
+            <br><br>
+
+            Possui atividade extra?
+            <label>
+            <input type="radio" name="atv"> sim </label>
+            <label>
+            <input type="radio" name="atv"> não</label>
+            
+
+            <input type="submit" value="mandar">
+        </fieldset>
+
+        <fieldset>
+            <legend>Area de interesse</legend>
+            <label>
+            <input type="checkbox" name="interesse" value="html"> HTML </label>
+            <input type="checkbox"> css
+            <input type="checkbox"> javascript
+            <input type="checkbox"> php
+
+
+            <input type="submit" value="mandar">
+
+            <select name="linguagem" id="">
+                <optgroup label="frontend">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JS</option>
+                    <option value="php">PHP</option>
+                </optgroup>
+
+                <optgroup label="backend">
+                    <option value="java">Java</option>
+                    <option value="python">python</option>
+                </optgroup>
+               
+            </select>
+            <input type="text" list="teste">
+            <datalist id="teste">
+                <option value="HTML"></option>
+                <option value="CSS"></option>
+                <option value="JS"></option>
+                <option value="python"></option>
+                <option value="php"></option>
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea name="msg" cols="30" rows="10"></textarea>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
