@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <form>
+    <form method="post">
         <fieldset>
             <legend>Formulário de contato</legend>
             <label for="nome">Nome
@@ -16,8 +16,8 @@
             <label for="Assunto">Assunto
                 <input type="text" name="assunto" required placeholder="Digite o assunto"></label>
             <label for="mensagem">Mensagem
-                <textarea name="mensagem" rows="5" required placeholder="Digite sua mensagem"></textarea></label>
-                <input type="submit" value="Enviar">
+                <textarea name="mensagem" rows="7" required placeholder="Digite sua mensagem" maxlength="1000" minlength="20"></textarea></label>
+                <button type="submit" value="Enviar" class="btn">Enviar</button>
         </fieldset>
     </form>
     

@@ -1,39 +1,74 @@
 body {
-  font-family: 'sans-serif';
+  font-family: "sans-serif";
   font-size: 16px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
-  background-color: #292929;
+  align-items: center;
+  background-color: #181818;
   color: white;
-  
-
+  min-height: 100vh;
 }
 label input,
 label textarea {
-    display: block;
-    width: 95%;
-    margin-bottom: 10px;
-    
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-input{
-  padding: 8px;
+input,
+textarea {
+  padding: 0.75em;
+  margin: 0.5em 0 2.5em;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 2px solid transparent;
+  border-bottom-color: #bbb;
+  outline: 0;
 }
-form{
-  width: 500px;
+form {
+  width: 90%;
+  min-width: 28.125em;
+  max-width: 35em;
   height: auto;
-  padding: 20px;
-  background-color: rgb(0, 0, 1);
+  padding: 1em;
+  background-color: #0e1010;
   border-radius: 16px;
 }
 
-fieldset{
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  text-align: center;
+  font-size: 20px;
+}
+
+.btn {
+  background-color: #2a2727;
+  color: white;
+  cursor: pointer;
+  padding: 0.7em;
+  font-size: 1.2em;
   border: none;
 }
 
-legend{
-  text-align: center;
-  font-size: 20px;
+input:invalid:focus,
+textarea:invalid:focus {
+  border-bottom: 2px solid #fa000d;
+}
+
+input:valid:focus,
+textarea:valid:focus {
+  border-bottom: 2px solid #0ec72a;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 2px solid #8e999a;
+  background-color: #2a2727;
 }
