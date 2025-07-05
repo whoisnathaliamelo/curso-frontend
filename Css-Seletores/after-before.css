@@ -1,0 +1,36 @@
+p::before{
+    content: "ANTES";
+}
+
+p::after{
+    content: "DEPOIS";
+}
+
+div{
+    border: 3px solid black;
+    position: relative;
+    padding: 1em;
+    
+}
+
+p{
+    margin:0;
+}
+
+div::after{
+    content: "";
+    width: 1em;
+    height: 1em;
+    display: block; 
+    background: red;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+div::before{
+    content: url("https://picsum.photos/200/300");
+    display: inline-block;
+    float: left;
+    margin-right: 1em;
+}
