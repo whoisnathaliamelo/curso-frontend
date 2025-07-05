@@ -2,26 +2,28 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container"> 
-    <h1 class="title">Olá, bem-vindo!</h1>
-    <form action="#" method="get" class="form">
-        <fieldset class="fieldset">
-            <label for="user" class="username">Usuário</label>
-            <input type="text" id="user" required autofocus class="input">
-            <label for="pass" class="password">Senha</label>
-            <input type="password" id="pass" required class="input">
-            <div class="actions">
-            <input type="submit" value="Cadastre-se" class="btn">
-            <input type="submit" value="Entrar" class="btn">
-        </div>
-        </fieldset>
+    <div class="container">
+        <h1 class="title">Olá, bem-vindo!</h1>
+        <form action="#" method="get" class="form">
+            <fieldset class="fieldset">
+                <label for="user" class="username">Usuário</label>
+                <input type="text" id="user" required autofocus class="input">
+                
+                <label for="pass" class="password">Senha</label>
+                <input type="password" id="pass" required class="input">
+                
+                <div class="buttons-container">
+                    <input type="submit" value="Cadastre-se" class="btn" onclick="window.location.href='cadastro.html'">
+                    <input type="submit" value="Entrar" class="btn-login">
+                </div>
+                <a href="#" class="forgot-password">Esqueci minha senha</a>
+            </fieldset>
+        </form>
     </div>
-    </form>
-    
 </body>
 </html>
