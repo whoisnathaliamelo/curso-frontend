@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-elementos</title>
+
+    <style>
+        p::first-letter {
+            font-size: 2em;
+            color: red;
+        }
+
+
+        p::first-line {
+            font-weight: bold;
+            color: blue;
+        }
+
+        p::before {
+            content: "Antes do parágrafo - ";
+            color: green;
+        }
+
+        p::after {
+            content: " - Depois do parágrafo";
+            color: purple;
+        }
+
+        p::selection {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro quia itaque repudiandae fuga, perspiciatis corrupti?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro quia itaque repudiandae fuga, perspiciatis corrupti?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro quia itaque repudiandae fuga, perspiciatis corrupti?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro quia itaque repudiandae fuga, perspiciatis corrupti?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro quia itaque repudiandae fuga, perspiciatis corrupti?</p>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+div :first-child {
+  color: blue;
+}
+
+p:last-child {
+  color: green;
+}
+
+p:nth-child(2) {
+  color: red;
+}
+
+p:first-of-type {
+  color: purple;
+}
+
+p:last-of-type {
+  color: orange;
+}
+
+p:nth-of-type(2) {
+  color: yellow;
+}
+
+li:nth-child(odd) {
+  color: pink;
+}
+
+li:nth-child(even) {
+  color: cyan;
+}
+
+li:nth-child(3n - 2) {
+  color: magenta;
+}
