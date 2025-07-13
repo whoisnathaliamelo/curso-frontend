@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variaveis Parte 2</title>
+    <style>
+        @property --sucess-color {
+            syntax: '<color>';
+            inherits: true;
+            initial-value: green;
+        }
+
+        b {
+            color: var(--sucess-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+        <div class="div2">
+            <p>Lorem <b>ipsum</b> dolor sit.</p></div>
+    </div>
+    <p>teste</p>
+</body>
+</html>

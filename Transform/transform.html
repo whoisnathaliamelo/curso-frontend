@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transform</title>
+    <style>
+        body {
+            margin-bottom: 100vh;
+        }
+       div {
+        outline: 1px solid black;
+        width: 200px;
+        margin: .5em auto;
+       }
+
+       p {
+        width: 50%;
+
+       }
+
+       .destaque {
+        background-color: yellow;
+       }
+
+       .div1 .destaque {
+        transform: translateX(50%);
+       }
+
+       .div3 .destaque {
+        transform: rotate(45deg);
+       }
+
+       .div2 .destaque {
+        transform: scale(1.5);
+       }
+       .div4 .destaque {
+        transform: skew(20deg, 10deg);
+       }
+
+       </style>
+        
+</head>
+<body>
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p class="destaque">Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p class="destaque">Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="div3">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p class="destaque">Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="div4">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p class="destaque">Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="div5">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p class="destaque">Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    
+</body>
+</html>
