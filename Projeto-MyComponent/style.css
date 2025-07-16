@@ -11,6 +11,10 @@ body {
   font-family: "lucida sans", sans-serif;
   min-height: 100vh;
   line-height: 1.7;
+  background-image: url(./imagens/bg-unsplash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -40,7 +44,6 @@ section {
     margin-bottom: 3rem;
 }
 
-
 :root {
   --primary-color: #ff7833;
   --secondary-color: #31333b;
@@ -49,11 +52,11 @@ section {
 
 .main-header {
   flex: 0 0 26rem;
-  background-color: var(--secondary-color);
+  background-color: rgba(68, 72, 83, .8);
 }
 
 .main {
-  background-color: var(--tertiary-color);
+  background-color: rgba(68, 72, 83, .6);
   flex: 1 0;
   padding: 6.5rem 6rem 7.5rem;
 }
@@ -74,6 +77,9 @@ a {
 .main-nav {
   text-align: right;
   padding: 6.5rem 2.4rem 2.4rem;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .main-nav ul {
@@ -81,11 +87,12 @@ a {
   padding: 0;
 }
 
+
 .main-nav ul a {
   text-decoration: none;
   display: block;
   padding: 1.2rem 0;
-  transition: padding-right 0.2s, background-color 0, 4s;
+  transition: padding-right 0.2s, background-color 0.4s;
 }
 
 .main-nav ul a:hover,
@@ -134,34 +141,27 @@ a {
     gap: 3em;
     padding-top: 1.5rem;
     justify-content: space-between;
-
 }
 .row .row{
     padding-top: 0;
 }
-
 .row > * {
     flex: 1 0 0;
 }
-
 .alternate {
     list-style-type: none;
     padding-left: 0;
 }
-
 .alternate li:not(:last-child) {
     border-bottom: 2px solid;
     padding: 0;
 }
-
 .roman{
     list-style-type: upper-roman;
 }
-
 .list-emoji {
     list-style-type: "\1F642";
 }
-
 input,
 label,
 textarea,
@@ -170,13 +170,10 @@ select {
     width: 100%;
     box-sizing: border-box;
 }
-
 input[type="radio"],
 input[type="checkbox"] {
     width: auto;
-;
 }
-
 input,
 select,
 textarea {
@@ -186,15 +183,74 @@ textarea {
     margin-bottom: 1.6rem;
     border: none;
 }
-
 .btn {
     background-color: var(--primary-color);
     color: #fff;
-    padding: 1.2rem;
+    padding: 0.8em 1.2rem;
     border-radius: 5px;
     cursor: pointer;
 }
-
 .form-quiz {
     width: calc(50% - 1.5rem);
+}
+.btn + .btn {
+    margin-left: 2em;
+}
+.btn-big {
+  font-size: 1em;
+}
+.btn-full {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.btn-full + .btn-full {
+  margin-left: 0;
+  margin-top: 2rem;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+.table td:last-child,
+.table th:last-child {
+ text-align: right;
+}
+.table td,
+.table th {
+  border-bottom: 2px solid #7b7b7b;
+  padding: 1.6rem;
+}
+.table th {
+  text-transform: uppercase;
+  text-align: left;
+}
+.table-alternate tbody tr:nth-child(even) {
+  background-color: #36383d;
+}
+.table-vertical td:not(:last-child) {
+  border-right: 2px solid #7b7b7b;
+}
+.fa-brands{
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+.fa-brands:hover {
+  color: var(--primary-color);
+  cursor: pointer ;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+  cursor: pointer;
 }
