@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+  }
+  
+  
+  section {
+      counter-reset: contador;
+  }
+  
+  .cores {
+   counter-increment: contador;
+  }
+  
+  .cores::before {
+    content: counter(contador);
+  }
+  
