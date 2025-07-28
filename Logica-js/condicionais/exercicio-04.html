@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n1 = parseFloat(prompt("Digite a primeira nota de 0 a 10: "))
+        let n2 = parseFloat(prompt("Digite a segunda nota de 0 a 10: "))
+        if (n1 <= 10 && n2 <= 10 && n1 >= 0 && n2 >= 0 && !isNaN(n1) && !isNaN(n2)) {
+            let media = (n1 + n2) / 2
+            alert("Sua média é: " + media)
+        } else if (isNaN(n1) == true || isNaN(n2) == true) {
+            alert("Digite apenas numeros")
+        } else {
+            alert("Nota invalida! Digite apenas notas de 0 a 10")
+        }
+    </script>
+
+</body>
+</html>
