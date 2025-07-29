@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dados</title>
+  </head>
+  <body>
+    <script>
+      function jogarDados(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      let dado1 = jogarDados(1, 6);
+      let dado2 = jogarDados(1, 6);
+      let contador = 1;
+
+      while (dado1 != dado2) {
+        console.log(dado1, dado2);
+        contador++;
+        dado1 = jogarDados(1, 6);
+        dado2 = jogarDados(1, 6);
+      }
+      if (dado1 == dado2) {
+        document.write(
+          "O dado foi jogado " +
+            contador +
+            " vezes até sairem iguas, o numero repetido foi o " +
+            dado1
+        );
+      }
+    </script>
+  </body>
+</html>
