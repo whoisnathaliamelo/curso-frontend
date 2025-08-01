@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = parseInt(
+        prompt("Digite um numero para visualizar sua tabuada: ")
+      );
+      if (isNaN(n)) {
+        alert("Digite apenas numeros!");
+      } else {
+        for (let i = 0; i <= 1000; i++) {
+          document.write(n + " x " + i + " : " + n * i + "<br>");
+        }
+        document.write("Fim da tabuada!");
+      }
+    </script>
+  </body>
+</html>

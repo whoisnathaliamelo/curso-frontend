@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      for (let ano = 1004; ano <= 2024; ano++) {
+        if ((ano % 4 === 0 && ano % 100 != 0) || ano % 400 === 0) {
+          document.write("O ano " + ano + " é bissexto" + "<br>");
+        } else {
+          document.write("O ano " + ano + " não é bissexto" + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>
