@@ -9,7 +9,8 @@
     <script>
         let nomes = ["Nath", "Davi", "Nathalia", "David"]
         let nome = prompt("Digite seu nome")
-        
+        nomes[nomes.length] = nome
+
         for (let i = 0; i < nomes.length; i++) {
             document.write("Nome: " + nomes[i] + "<br>")
             
