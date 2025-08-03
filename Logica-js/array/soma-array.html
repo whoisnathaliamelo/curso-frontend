@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const numeros = [
+        5,
+        undefined,
+        5,
+        5,
+        "5",
+        false,
+        null,
+        "qualquer coisa",
+        5,
+      ];
+      let soma = 0;
+      for (let i = 0; i < numeros.length; i++) {
+        let n = numeros[i];
+        if (typeof n === "number" && !isNaN(n)) {
+          soma = soma + n;
+        }
+      }
+      alert("A soma de todos os numeros é: " + soma);
+    </script>
+  </body>
+</html>
