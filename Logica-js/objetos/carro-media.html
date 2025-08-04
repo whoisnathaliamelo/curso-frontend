@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const carro = {
+        modelo: "Uno",
+        ano: 2023,
+        km: 10000,
+        combustivel: "gasolina",
+        litrosConsumidos: 625,
+      };
+      let media = carro.km / carro.litrosConsumidos;
+      carro.marca = "Fiat";
+      document.write(
+        `O carro ${carro.marca} ${carro.modelo} ${carro.ano} fez em média ${media}Km/L de ${carro.combustivel}`
+      );
+    </script>
+  </body>
+</html>
