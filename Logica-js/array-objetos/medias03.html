@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medias</title>
+  </head>
+  <body>
+    <ul id="listaAlunos"></ul>
+    <script>
+      const alunos = [
+        {
+          nome: "Nath",
+          notas: [1, 3, 4, 5],
+        },
+        {
+          nome: "David",
+          notas: [4, 2, 5, 6],
+        },
+      ];
+      const listaAlunos = document.getElementById("listaAlunos");
+      for (let i = 0; i < alunos.length; i++) {
+        listaAlunos.innerHTML += `<li> ${alunos[i].nome} </li>`;
+      }
+    </script>
+  </body>
+</html>
