@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Calculadora!</h1>
+    <script>
+      function calcular(number1, number2, operador) {
+        if (typeof number1 !== "number" || typeof number2 !== "number") {
+          console.log("Digite apenas numeros.");
+          return;
+        }
+        if (
+          operador != "+" &&
+          operador != "-" &&
+          operador != "*" &&
+          operador != "/"
+        ) {
+          console.log("Digite um operador válido.");
+        }
+        if (operador == "+") {
+          resultado = number1 + number2;
+          console.log(resultado);
+        }
+        if (operador == "-") {
+          resultado = number1 - number2;
+          console.log(resultado);
+        }
+        if (operador == "*") {
+          resultado = number1 * number2;
+          console.log(resultado);
+        }
+        if (operador == "/") {
+          resultado = number1 / number2;
+          console.log(resultado);
+        }
+      }
+    </script>
+  </body>
+</html>
