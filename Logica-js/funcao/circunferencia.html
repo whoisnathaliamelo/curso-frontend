@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculo area da circunferencia</title>
+  </head>
+  <body>
+    <h1>Calculo area da circunferencia</h1>
+    <label
+      >Raio
+      <input type="number" id="raio" />
+    </label>
+    <button onclick="calculoArea()">Carcular area</button>
+    <div id="output"></div>
+    <script>
+      const raio = document.getElementById("raio");
+      const output = document.getElementById("output");
+      function calculoArea() {
+        let raioValue = raio.value;
+        let circunferencia = Math.PI * (raioValue * raioValue);
+        output.innerHTML = `A area da circunferencia é: ${circunferencia.toFixed(
+          2
+        )}`;
+      }
+    </script>
+  </body>
+</html>
