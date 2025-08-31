@@ -7,32 +7,33 @@ function calcularImc(peso, altura) {
   }
 
   let imc = peso / altura ** 2;
-  console.log(`Seu IMC é ${imc.toFixed(2)} `);
 
   function classificacaoImc(imc) {
-    if (imc > 16 && imc < 16.9) {
-      console.log("Seu IMC está muito abaixo do peso");
+    if (imc >= 16 && imc <= 16.9) {
+      return "Seu IMC está muito abaixo do peso";
     }
-    if (imc > 17 && imc < 18.4) {
-      console.log("Seu IMC está abaixo do peso");
+    if (imc >= 17 && imc <= 18.4) {
+      return "Seu IMC está abaixo do peso";
     }
-    if (imc > 18.5 && imc < 24.9) {
-      console.log("Seu IMC está no peso normal");
+    if (imc >= 18.5 && imc <= 24.9) {
+      return "Seu IMC está no peso normal";
     }
-    if (imc > 25 && imc < 29.9) {
-      console.log("Seu IMC está acima do peso");
+    if (imc >= 25 && imc <= 29.9) {
+      return "Seu IMC está acima do peso";
     }
-    if (imc > 30 && imc < 34.9) {
-      console.log("Seu IMC está em Obesidade Grau I");
+    if (imc >= 30 && imc <= 34.9) {
+      return "Seu IMC está em Obesidade Grau I";
     }
-    if (imc > 35 && imc < 40) {
-      console.log("Seu IMC está em Obesidade Grau II");
+    if (imc >= 35 && imc <= 40) {
+      return "Seu IMC está em Obesidade Grau II";
     }
     if (imc > 40) {
-      console.log("Seu IMC está em Obesidade Grau III");
+      return "Seu IMC está em Obesidade Grau III";
     }
+    return "Valor de IMC fora da classificação";
   }
-  classificacaoImc(imc);
+
+  return `Seu IMC é ${imc.toFixed(2)} → ${classificacaoImc(imc)}`;
 }
 
 console.log(calcularImc(100, 1.55));
