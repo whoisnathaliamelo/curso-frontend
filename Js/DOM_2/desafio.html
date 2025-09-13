@@ -86,7 +86,10 @@
 
       //clone a ul de .original e a inclua na primeira li de .alvo
 
-      
+      const cloneUl = document.querySelector(".original ul")
+      const elementoCopiado = cloneUl.cloneNode(true)
+      const alvoLi = document.querySelector(".alvo ul li:first-child ")
+      alvoLi.appendChild(elementoCopiado)
 
       //remova a ultima li (item2) da lista inserida na etapa anterior
 
