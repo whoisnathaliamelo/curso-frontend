@@ -65,15 +65,19 @@
     </div>
 
     <script type="text/javascript">
-        
+
       // crie um nova li com texto "item 2" e a inclua na ul de div com class .alvo
 
-      const alvo = document.querySelector(".alvo", "ul");
+      const alvo = document.querySelector(".alvo ul");
       console.log(alvo);
       alvo.innerHTML += "<li> item 2 </li>";
 
       //Mova a última li de orignal para alvo (mas antes da primeira li).
       //Em outras palavras, a última li da original deve virar a primeira li de alvo
+
+      const liUltima = document.querySelector(".original ul li:last-child")
+      const ulAlvo = document.querySelector(".alvo ul")
+      ulAlvo.prepend(liUltima)
 
       //altere o texto da primeira li de .alvo para "item 0"
 
