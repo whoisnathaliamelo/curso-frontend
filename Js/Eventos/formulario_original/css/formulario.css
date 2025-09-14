@@ -1,0 +1,257 @@
+
+
+:root{
+    --bg-1:#0f0f12;
+    --bg-2:#1a1b20;
+    --brand-1:#ff7da0;   
+    --brand-2:#ff94b3;   
+    --text-1:#ffffff;
+    --text-2:#d9d9e3;
+    --muted:#b6b6c2;
+    --border:#2a2b31;
+    --ring:#ffd1e0;
+    --success:#28c76f;
+    --danger:#ff4d6d;
+    --shadow: 0 10px 35px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.25);
+  }
+  
+  *,
+  *::before,
+  *::after{
+    box-sizing:border-box;
+  }
+  
+  html, body{
+    height:100%;
+  }
+  
+  body{
+    margin:0;
+    font-family:'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    letter-spacing:.02em;
+    color:var(--text-1);
+    background:
+      radial-gradient(1200px 800px at 10% -10%, rgba(255,125,160,.25), transparent 60%),
+      radial-gradient(900px 700px at 100% 0%, rgba(255,148,179,.18), transparent 55%),
+      linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:2rem;
+  }
+  
+  .formCadastro__app{
+    width: min(680px, 92vw);
+    background: linear-gradient(180deg, rgba(255,148,179,.16), rgba(255,125,160,.10)) ;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    overflow:hidden;
+  }
+  
+  .formCadastro__container{
+    padding: clamp(1.25rem, 3.5vw, 2rem);
+    border-radius:16px;
+  }
+  
+  .formCadastro__container > .heading{
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    line-height:1.2;
+    margin: 0 0 1rem 0;
+    text-align:center;
+    letter-spacing:.02em;
+    background: linear-gradient(90deg, #fff, #ffe1ea 60%, #ffd1e0);
+    -webkit-background-clip: text;
+    background-clip:text;
+    color: transparent;
+  }
+  
+  .formCadastro{
+    display:grid;
+    gap:.75rem;
+  }
+  
+  .formCadastro label[for],
+  .formCadastro label{
+    font-size:.95rem;
+    color:var(--text-2);
+    margin-top:.35rem;
+  }
+  
+  input[type="text"],
+  textarea{
+    width:100%;
+    padding:.9rem 1rem;
+    border:1px solid var(--border);
+    border-radius:12px;
+    background: rgba(255,255,255,.04);
+    color:var(--text-1);
+    outline:none;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease, transform .05s ease;
+  }
+  
+  input[type="text"]::placeholder,
+  textarea::placeholder{
+    color:var(--muted);
+  }
+  
+  input[type="text"]:hover,
+  textarea:hover{
+    background: rgba(255,255,255,.06);
+    border-color: rgba(255,255,255,.14);
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus{
+    border-color: var(--brand-2);
+    box-shadow: 0 0 0 4px rgba(255,125,160,.18);
+    background: rgba(255,255,255,.07);
+  }
+  
+  textarea{
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.45;
+  }
+  
+  #contador, .contador{
+    margin-top:.25rem;
+    text-align:right;
+    font-size:.8rem;
+    color:var(--muted);
+  }
+  
+  #chkAceito{
+    accent-color: var(--brand-1);
+    width:1.1rem;
+    height:1.1rem;
+    vertical-align: middle;
+    margin-right:.5rem;
+  }
+  .formCadastro label input[type="checkbox"] + *{
+    color:var(--text-2);
+  }
+  .formCadastro label:hover{
+    color:#fff;
+  }
+  
+  input[type="submit"]{
+    border:none;
+    background: linear-gradient(180deg, #fff, #f7f7f7);
+    color: var(--brand-1);
+    border-radius: 12px;
+    padding:.9rem 2.25rem;
+    margin-left:auto;
+    margin-top:.75rem;
+    cursor:pointer;
+    font-weight:700;
+    font-size:1rem;
+    box-shadow: 0 6px 18px rgba(255,125,160,.25);
+    transition: transform .06s ease, box-shadow .2s ease, filter .2s ease;
+  }
+  input[type="submit"]:hover{
+    box-shadow: 0 10px 26px rgba(255,125,160,.35);
+    filter: saturate(1.02);
+  }
+  input[type="submit"]:active{
+    transform: translateY(1px) scale(.99);
+  }
+  input[type="submit"]:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+  }
+  
+  input:required:invalid,
+  textarea:required:invalid{
+    border-color: rgba(255,77,109,.35);
+  }
+  input:required:valid,
+  textarea:required:valid{
+    border-color: rgba(40,199,111,.35);
+  }
+  
+  #feedbackMessage{
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(255,149,149,.22), rgba(255,149,149,.14));
+    color:#ffeef1;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: .9rem 1rem;
+    border: 1px solid rgba(255,149,149,.35);
+    box-shadow: var(--shadow);
+    transform: translateY(calc(-2rem - 100%));
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .25s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  #feedbackMessage p{
+    margin:.35em 0;
+    font-weight:600;
+    color:#fff;
+  }
+  
+  #feedbackMessage button{
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.2);
+    color:#fff;
+    border-radius:10px;
+    padding:.4rem .6rem;
+    cursor:pointer;
+    transition: background .2s ease, transform .06s ease;
+  }
+  #feedbackMessage button:hover{
+    background:rgba(255,255,255,.16);
+  }
+  #feedbackMessage button:active{
+    transform: translateY(1px);
+  }
+  
+  #feedbackMessage.show{
+    transform: translateY(0);
+  }
+  
+  @media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; }
+  }
+  
+  @media (max-width: 440px){
+    .formCadastro__container{
+      padding: 1rem .9rem;
+    }
+    input[type="submit"]{
+      width:100%;
+      margin-left:0;
+    }
+  }
+  
+  :focus-visible{
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 10px;
+  }
+  
+  .formCadastro:focus-within .formCadastro__container,
+  .formCadastro__app:focus-within{
+    box-shadow:
+      0 10px 35px rgba(0,0,0,.35),
+      0 0 0 1px rgba(255,255,255,.04),
+      0 0 0 6px rgba(255,125,160,.10);
+  }
+  
+  .formCadastro__app{ min-width:12.5em; }
+  .formCadastro__container > .heading{ margin-bottom:1rem; }
+  
+  input[type="text"],
+  textarea{
+    border:1px solid pink;          
+    border-color: rgba(255,192,203,.45);
+  }
+  
