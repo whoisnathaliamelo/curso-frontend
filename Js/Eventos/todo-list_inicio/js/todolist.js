@@ -1,18 +1,39 @@
 (function () {
   "use strict";
 
+  // =========================
+  // CONSTRUTOR: Task
+  // =========================
   function Task(name, completed, createdAt, updatedAt) {
-    // crie uma funcao construtora chamada Task.
-    // essa funcao recebe por parametro obrigatório o nome da tarefa
-    // também recebe tres parametros opcionais (completed, createdAt, updatedAt)
-    // o objeto retornado por essa funcao deve ter quatro propriedades:
-    //  - name - string - obrigatório,
-    //  - completed - boolean - opcional, false é o default,
-    //  - createdAt - timestamp - opcional, timestamp atual é o valor default)
-    //  - updatedAt - timestamp - opcional, null é o valor default
-    // o objeto retornado por essa funcao deve ter um método chamado toggleDone, que deve inverter o boolean completed
+    if (!name || typeof name !== "string") {
+      throw new Error("Task precisa de um nome (string).");
+    }
+
+    // completed: default false se não for boolean
+    this.completed = typeof completed === "boolean" ? completed : false;
+
+    // createdAt: timestamp numérico; default = agora
+    this.createdAt =
+      typeof createdAt === "number" && !Number.isNaN(createdAt)
+        ? createdAt
+        : Date.now();
+
+    // updatedAt: timestamp ou null; default = null
+    this.updatedAt =
+      typeof updatedAt === "number" && !Number.isNaN(updatedAt)
+        ? updatedAt
+        : null;
+
+    this.name = name;
+
+    // inverte o estado de concluída e atualiza updatedAt
+    this.toggleDone = () => {
+      this.completed = !this.completed;
+      this.updatedAt = Date.now();
+    };
   }
 
+  // Dados iniciais (literais)
   let arrTasks = [
     {
       name: "task 1",
@@ -33,11 +54,12 @@
     },
   ];
 
-  // a partir de um array de objetos literais, crie um array contendo instancias de Tasks.
-  // Essa array deve chamar arrInstancesTasks
-  // const arrInstancesTasks = DESCOMENTE ESSA LINHA E RESOLVA O ENUNCIADO
+  // Transforma literais em instâncias de Task
+  const arrInstancesTasks = arrTasks.map(
+    (t) => new Task(t.name, t.completed, t.createdAt, t.updatedAt)
+  );
 
-  //ARMAZENAR O DOM EM VARIAVEIS
+  // ====== DOM ======
   const itemInput = document.getElementById("item-input");
   const todoAddForm = document.getElementById("todo-add");
   const ul = document.getElementById("todo-list");
@@ -54,9 +76,9 @@
 
     checkButton.className = "button-check";
     checkButton.innerHTML = `
-            <i class="fas fa-check ${
-              obj.completed ? "" : "displayNone"
-            }" data-action="checkButton"></i>`;
+              <i class="fas fa-check ${
+                obj.completed ? "" : "displayNone"
+              }" data-action="checkButton"></i>`;
     checkButton.setAttribute("data-action", "checkButton");
 
     li.appendChild(checkButton);
@@ -104,20 +126,24 @@
     });
   }
 
-  function addTask(task) {
-    // adicione uma nova instancia de Task
+  function addTask(taskName) {
+    const name = String(taskName || "").trim();
+    if (!name) return; // não adiciona vazio
+    // adiciona nova instância de Task
+    arrInstancesTasks.push(new Task(name));
     renderTasks();
   }
 
   function clickedUl(e) {
     const dataAction = e.target.getAttribute("data-action");
-    console.log(e.target);
     if (!dataAction) return;
 
     let currentLi = e.target;
-    while (currentLi.nodeName !== "LI") {
+    while (currentLi && currentLi.nodeName !== "LI") {
       currentLi = currentLi.parentElement;
     }
+    if (!currentLi) return;
+
     const currentLiIndex = [...lis].indexOf(currentLi);
 
     const actions = {
@@ -135,8 +161,11 @@
         renderTasks();
       },
       containerEditButton: function () {
-        const val = currentLi.querySelector(".editInput").value;
-        arrInstancesTasks[currentLiIndex].name = val;
+        const val = currentLi.querySelector(".editInput").value.trim();
+        if (val) {
+          arrInstancesTasks[currentLiIndex].name = val;
+          arrInstancesTasks[currentLiIndex].updatedAt = Date.now();
+        }
         renderTasks();
       },
       containerCancelButton: function () {
@@ -145,8 +174,8 @@
           arrInstancesTasks[currentLiIndex].name;
       },
       checkButton: function () {
-        // DEVE USAR O MÉTODO toggleDone do objeto correto
-
+        // usa o método toggleDone da instância correta
+        arrInstancesTasks[currentLiIndex].toggleDone();
         renderTasks();
       },
     };
@@ -158,10 +187,7 @@
 
   todoAddForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    console.log(itemInput.value);
     addTask(itemInput.value);
-    renderTasks();
-
     itemInput.value = "";
     itemInput.focus();
   });
